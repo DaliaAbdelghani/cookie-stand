@@ -1,0 +1,7 @@
+h1 {color: black;font-style: italic;font-size: large;font-weight: bold;text-align: center;}
+
+h2 {color: black;font-style: italic;font-size: large;font-weight: bold;text-align: left;}
+
+body {background-image:url("https://image.freepik.com/free-photo/american-cookies-with-copy-space-background_23-2148240649.jpg");background-repeat: no-repeat;background-size: cover;}
+
+section { display: block;align-self: start; }
