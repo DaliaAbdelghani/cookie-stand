@@ -22,7 +22,8 @@ Location.prototype.getCalculatedCookies = function ( ){
     let cookiesPerHour = Math.round(getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers);
     this.dailyTotalCookies+=cookiesPerHour;
     this.calculatedCookies.push(cookiesPerHour);
-    console.log(this.calculatedCookies);}
+    console.log(this.calculatedCookies);
+    }   
 };
   Location.prototype.render = function () {
     this.getCalculatedCookies();
@@ -30,15 +31,19 @@ Location.prototype.getCalculatedCookies = function ( ){
   console.log(container);
   const tableEl = document.createElement('table'); 
   container.appendChild(tableEl);
+  const tableBodyEl =document.createElement('tBody');
+  tableEl.appendChild(tableBodyEl);
   const rowEl=document.createElement('tr');
-  tableEl.appendChild(rowEl);
+  tableBodyEl.appendChild(rowEl);
   this.calculatedCookies.unshift(this.place); 
       for ( let i=0; i< openingHours.length; i++) {
     const dataEl=document.createElement('td');
     rowEl.appendChild(dataEl);
     dataEl.textContent = this.calculatedCookies[i];
   }
- 
+  const dataLastEl=document.createElement('td');
+  rowEl.appendChild(dataLastEl); 
+  dataLastEl.textContent=this.dailyTotalCookies; 
 };
 
 // table header 
@@ -57,27 +62,24 @@ function getTableHeader(){
   tableHeaderEl.textContent=openingHours[i];
   console.log(tableHeaderEl);
    }
+   const dataLastEl=document.createElement('td');
+   rowEl.appendChild(dataLastEl); 
+   dataLastEl.textContent='Total Daily Cookies'; 
   };
   
   getTableHeader(); 
 
-  // table footer
 
-function getTableFooter(){
-  const container = document.getElementById('Branches'); // section
-  console.log(container);
-  const tableEl = document.createElement('table'); 
-  container.appendChild(tableEl);
-  const footerEl=document.createElement('tfoot');
-  tableEl.appendChild(footerEl);
-  for (let i=0;i< openingHours.length; i++){
-  const fDataEl = document.createElement('td');
-  footerEl.appendChild(fDataEl);
-  fDataEl.textContent='Total Daily Cookies in all locations';
-  console.log(fDataEl);
-   }
-  };
-  getTableFooter();
+  
+  let locationsList = ['seattle','Tokyo','Dubai','Paris','Lima','Istanbul'];
+
+  let allHourlyTotal = function (){
+  for (let i=0; i<locationsList.length; i++){
+    let cookiesPerHour = Math.round(getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers);
+  }
+
+  
+  }
 
 //FIRST LOCATION
 const seattle = new Location(
@@ -148,3 +150,24 @@ const istanbul = new Location(
 console.log(istanbul);
 istanbul.getCalculatedCookies(); 
 istanbul.render();
+
+  // table footer
+
+  function getTableFooter(){
+    const container = document.getElementById('Branches'); // section
+    console.log(container);
+    const tableEl = document.createElement('table'); 
+    container.appendChild(tableEl);
+    const tableFooterEl =document.createElement('tfoot');
+    tableEl.appendChild(tableFooterEl);
+    const rowFooterEl=document.createElement('tr');
+    tableFooterEl.appendChild(rowFooterEl);
+     for (let i=0;i<= openingHours.length; i++){
+    const fDataEl = document.createElement('td');
+    rowFooterEl.appendChild(fDataEl);
+    fDataEl.textContent='Total Daily Cookies in all locations';
+    console.log(fDataEl);
+     }
+    };
+  
+    getTableFooter();

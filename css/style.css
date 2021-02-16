@@ -8,6 +8,6 @@ body {background-image:url("https://image.freepik.com/free-photo/american-cookie
 
 section { display: block;align-self: start; }
 
-table ,tr, td ,th {border: double; border-color:brown;border-style: double;font-weight: bold;table-layout:fixed;width: 100px}
+table ,tr, td ,th {border: double; border-color:brown;border-style: double;font-weight: bold;table-layout:fixed;width: 90px}
 
-td, th {height:unset;width:unset;width: 100px}
+td, th {height:unset;width:unset;width: 90px}
