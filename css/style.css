@@ -1,7 +1,13 @@
-h1 {color: black;font-style: italic;font-size: large;font-weight: bold;text-align: center;}
+
+
+h1 {color:white;font-style: italic;font-size: large;font-weight: bold;text-align: center; background-color: brown;}
 
 h2 {color: black;font-style: italic;font-size: large;font-weight: bold;text-align: left;}
 
 body {background-image:url("https://image.freepik.com/free-photo/american-cookies-with-copy-space-background_23-2148240649.jpg");background-repeat: no-repeat;background-size: cover;}
 
 section { display: block;align-self: start; }
+
+table ,tr, td ,th {border: double; border-color:brown;border-style: double;font-weight: bold;table-layout:fixed;width: 90px}
+
+td, th {height:unset;width:unset;width: 90px}
