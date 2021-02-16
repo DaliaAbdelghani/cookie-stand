@@ -16,7 +16,7 @@ const seattle = {
   calculatedCookies: [ ],
   getCalculatedCookies : function (){
     for (let i=0; i< openingHours.length; i++) {
-      let cookiesPerHour = getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers;
+      let cookiesPerHour = Math.round(getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers);
       this.dailyTotalCookies+=cookiesPerHour;
       this.calculatedCookies.push(cookiesPerHour);
       console.log(this.calculatedCookies);}
@@ -56,7 +56,7 @@ const tokyo = {
   calculatedCookies: [ ],
   getCalculatedCookies : function (){
     for (let i=0; i< openingHours.length; i++) {
-      let cookiesPerHour = getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers;
+      let cookiesPerHour = Math.round(getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers);
       this.dailyTotalCookies+=cookiesPerHour;
       this.calculatedCookies.push(cookiesPerHour);
       console.log(this.calculatedCookies);}
@@ -97,7 +97,7 @@ const dubai = {
   calculatedCookies: [ ],
   getCalculatedCookies : function (){
     for (let i=0; i< openingHours.length; i++) {
-      let cookiesPerHour = getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers;
+      let cookiesPerHour = Math.round(getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers);
       this.dailyTotalCookies+=cookiesPerHour;
       this.calculatedCookies.push(cookiesPerHour);
       console.log(this.calculatedCookies);}
@@ -137,7 +137,7 @@ const paris = {
   calculatedCookies: [ ],
   getCalculatedCookies : function (){
     for (let i=0; i< openingHours.length; i++) {
-      let cookiesPerHour = getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers;
+      let cookiesPerHour = Math.round(getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers);
       this.dailyTotalCookies+=cookiesPerHour;
       this.calculatedCookies.push(cookiesPerHour);
       console.log(this.calculatedCookies);}
@@ -178,7 +178,7 @@ const lima = {
   calculatedCookies: [ ],
   getCalculatedCookies : function (){
     for (let i=0; i< openingHours.length; i++) {
-      let cookiesPerHour = getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers;
+      let cookiesPerHour = Math.round(getRandomNumber(this.minCustomers,this.maxCustomers)*this.avgCustomers);
       this.dailyTotalCookies+=cookiesPerHour;
       this.calculatedCookies.push(cookiesPerHour);
       console.log(this.calculatedCookies);}
