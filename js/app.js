@@ -77,7 +77,12 @@ function getTableHeader(){
   
   getTableHeader(); 
 
+<<<<<<< HEAD
  
+=======
+
+
+>>>>>>> b69083d2577bdd68ac0e1dd77737876f97073872
 //FIRST LOCATION
 const seattle = new Location(
   'Seattle',
@@ -130,6 +135,7 @@ locationsList.push(paris);
 paris.render();
 
 // FIFTH LOCATION
+<<<<<<< HEAD
 
 const lima = new Location(
   'Lima',
@@ -169,8 +175,59 @@ function calculateTotal(){
 }
  return summations;
 }
+=======
 
+const lima = new Location(
+  'Lima',
+  20,
+  38,
+  2.3,
+);
+console.log(lima);
+ 
+locationsList.push(lima); 
+lima.render();
 
+// SIXTH LOCATION
+
+const istanbul = new Location(
+  'Istanbul',
+  10,
+  25,
+  1.2,
+);
+console.log(istanbul);
+ 
+locationsList.push(istanbul); 
+istanbul.render();
+
+function calculateTotal(){
+ let summations = [];
+ if(locationsList && locationsList.length >0){
+ for ( let i=0; i<locationsList[0].calculatedCookies.length; i++){
+    summations[i]=0;
+ }
+ for (let locIdx in locationsList){
+   let loc = locationsList[locIdx];
+   for ( let i=0; i<loc.calculatedCookies.length; i++){
+     summations[i] += loc.calculatedCookies[i];
+   }
+ }
+}
+ return summations;
+}
+
+>>>>>>> b69083d2577bdd68ac0e1dd77737876f97073872
+
+function grandTotal (){
+  let sum = 0;
+  for (let i=0; i< locationsList.length;i++ ){
+    sum += locationsList[i].dailyTotalCookies;
+    }
+    return sum;
+}
+
+<<<<<<< HEAD
 function grandTotal (){
   let sum = 0;
   for (let i=0; i< locationsList.length;i++ ){
@@ -182,6 +239,11 @@ function grandTotal (){
 
   // table footer
 
+=======
+
+  // table footer
+
+>>>>>>> b69083d2577bdd68ac0e1dd77737876f97073872
   function getTableFooter(){
     const container = document.getElementById('Branches'); // section
     console.log(container);
