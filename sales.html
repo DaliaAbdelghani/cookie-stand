@@ -23,12 +23,36 @@
       <h1>Pat's Salmon Cookies Sales</h1>
       <hr>
       <h2>Daily Schedule:</h2>
-      <section id="Branches"> 
-      </section>
- 
+      <section id="Branches"></section>
+       <br>
+       <hr>
 
-    </main>
-    <footer></footer>
+      <form id="FORM">
+      <fieldset>
+      <legend>New Location Form</legend> <br>
+
+       <label for="place">Place : </label>
+       <input type="text" id="place" name="place" required/> <br>
+      
+       <label for="minCustomers"> Minimum No. of Customers per Hour : </label>
+       <input type="number" id="minCustomers" name="minCustomers" required min="1"/><br>
+
+       <label for="maxCustomers"> Maximum No. of Customers per Hour : </label>
+       <input type="number" id="maxCustomers" name="maxCustomers" required min="1"/><br>
+
+       <label for="avgCustomers"> The Average number of Cookies Purchased per Customer: </label>
+       <input type="number" id="avgCustomers" name="avgCustomers" required min="1"/><br>
+
+       <input type="submit" id="submit"/> <br>
+
+      </fieldset>
+      </form> <br>
+
+
+     </main>
+    <footer>
+
+    </footer>
     <script src="./js/app.js"></script>
   </body>
 </html>
